@@ -44,27 +44,12 @@ portfolio/
 └── package.json
 ```
 
-## 🎨 Customization
-
-### Replacing Profile Photo
-In `src/components/Hero.jsx`, find the image container div and replace the placeholder with:
-```jsx
-<img src="/your-photo.png" alt="Rafael Maia" className="w-full h-full object-cover" />
-```
-Place your image in the `public/` folder.
-
-### Updating Projects
-Edit the `projects` array in `src/components/Projects.jsx` — each item has:
-- `title`, `description`, `tech`, `github`, `color`, `emoji`
-
-### Updating Contact Links
-Edit the `socials` array in `src/components/Contact.jsx`.
-
 ## ✨ Features
+
 - Dark minimal aesthetic with noise texture overlay
 - Sticky navbar with active section tracking + mobile hamburger
 - Scroll-triggered reveal animations (IntersectionObserver)
-- Tech stack cards with hover glow/lift effects  
+- Tech stack cards with hover glow/lift effects
 - Horizontal scroll carousel with arrow controls and dot indicators
 - Expandable project descriptions ("Read more")
 - Responsive grid for all screen sizes
