@@ -10,7 +10,7 @@ const projects = [
         tech: ['Python', 'JavaScript', 'Django', 'React', 'SQLite', 'Chart.js', 'WeasyPrint', 'Pandas'],
         github: 'https://github.com/Rafael-Domiciano-Maia-Mateus/FinManager',
         color: '#00ff87',
-        emoji: 'public/FinManager.png',
+        emoji: '/FinManager.png',
     },
     {
         title: 'Flappy Bird',
@@ -19,7 +19,7 @@ const projects = [
         tech: ['Python', 'Pygame'],
         github: 'https://github.com/Rafael-Domiciano-Maia-Mateus/Flappy-Bird',
         color: '#60a5fa',
-        emoji: 'public/FlappyBird.png',
+        emoji: '/FlappyBird.png',
     },
     {
         title: 'Chalés São Mateus',
@@ -28,7 +28,7 @@ const projects = [
         tech: ['HTML', 'CSS', 'JavaScript'],
         github: 'https://github.com/Rafael-Domiciano-Maia-Mateus/Chales-Sao-Mateus-Web',
         color: '#a78bfa',
-        emoji: 'public/ChalesSaoMateus.png',
+        emoji: '/ChalesSaoMateus.png',
     },
     // {
     //     title: 'Currency Converter',
