@@ -41,7 +41,7 @@ const socials = [
     {
         name: 'GitHub',
         handle: '@Rafael-Domiciano-Maia-Mateus',
-        href: 'https://github.com/',
+        href: 'https://github.com/Rafael-Domiciano-Maia-Mateus',
         icon: Github,
         color: '#e8e8e8',
         bg: '#ffffff08',
@@ -50,7 +50,7 @@ const socials = [
     {
         name: 'Email',
         handle: 'rafelmaia.devbr@gmail.com',
-        href: 'rafelmaia.devbr@gmail.com',
+        href: 'mailto:rafelmaia.devbr@gmail.com',
         icon: Mail,
         color: '#00ff87',
         bg: '#00ff8710',
