@@ -1,76 +1,68 @@
 import { useReveal } from '../hooks/useReveal';
+import { useTranslation } from 'react-i18next';
 
-const stacks = [
-    {
-        name: 'Python',
-        icon: '/python.png',
-        level: 'Advanced',
-        color: '#3776AB',
-        desc: 'Primary language for scripting, automation, and backend development.',
-    },
-    {
-        name: 'JavaScript',
-        icon: '/javascript.png',
-        level: 'Advanced',
-        color: '#F7DF1E',
-        desc: 'Frontend interactivity, APIs, and Node.js ecosystem.',
-    },
-    {
-        name: 'Django',
-        icon: '/django.png',
-        level: 'Advanced',
-        color: '#092E20',
-        desc: 'Full-stack web framework for rapid, robust web applications.',
-    },
-    {
-        name: 'Django REST',
-        icon: '/django.png',
-        level: 'Advanced',
-        color: '#A30000',
-        desc: 'Building powerful RESTful APIs with authentication and serialization.',
-    },
-    {
-        name: 'Flask',
-        icon: '/flask.png',
-        level: 'Intermediate',
-        color: '#000000',
-        desc: 'Lightweight WSGI microframework for Python web apps.',
-    },
-    {
-        name: 'Pandas',
-        icon: '/pandas.png',
-        level: 'Advanced',
-        color: '#150458',
-        desc: 'Data manipulation, analysis, and transformation at scale.',
-    },
-    // {
-    //     name: 'PyAutoGUI',
-    //     icon: '🤖',
-    //     level: 'Advanced',
-    //     color: '#4B8BBE',
-    //     desc: 'GUI automation, screen control, and RPA workflows.',
-    // },
-    {
-        name: 'Selenium',
-        icon: '/selenium.png',
-        level: 'Advanced',
-        color: '#43B02A',
-        desc: 'Browser automation and end-to-end web testing.',
-    },
-    {
-        name: 'ExpressJS',
-        icon: '/expressjs.png',
-        level: 'Intermediate',
-        color: '#404040',
-        desc: 'Minimal Node.js framework for fast backend APIs.',
-    },
-];
+// const stacks = [
+//     {
+//         name: 'Python',
+//         icon: '/python.png',
+//         color: '#3776AB',
+//         desc: 'Primary language for scripting, automation, and backend development.',
+//     },
+//     {
+//         name: 'JavaScript',
+//         icon: '/javascript.png',
+//         color: '#F7DF1E',
+//         desc: 'Frontend interactivity, APIs, and Node.js ecosystem.',
+//     },
+//     {
+//         name: 'Django',
+//         icon: '/django.png',
+//         color: '#092E20',
+//         desc: 'Full-stack web framework for rapid, robust web applications.',
+//     },
+//     {
+//         name: 'Django REST',
+//         icon: '/django.png',
+//         color: '#A30000',
+//         desc: 'Building powerful RESTful APIs with authentication and serialization.',
+//     },
+//     {
+//         name: 'Flask',
+//         icon: '/flask.png',
+//         color: '#000000',
+//         desc: 'Lightweight WSGI microframework for Python web apps.',
+//     },
+//     {
+//         name: 'Pandas',
+//         icon: '/pandas.png',
+//         color: '#150458',
+//         desc: 'Data manipulation, analysis, and transformation at scale.',
+//     },
+//     // {
+//     //     name: 'PyAutoGUI',
+//     //     icon: '🤖',
+//     //     color: '#4B8BBE',
+//     //     desc: 'GUI automation, screen control, and RPA workflows.',
+//     // },
+//     {
+//         name: 'Selenium',
+//         icon: '/selenium.png',
+//         color: '#43B02A',
+//         desc: 'Browser automation and end-to-end web testing.',
+//     },
+//     {
+//         name: 'ExpressJS',
+//         icon: '/expressjs.png',
+//         color: '#404040',
+//         desc: 'Minimal Node.js framework for fast backend APIs.',
+//     },
+// ];
 
-const levelColors = {
-    Expert: 'text-accent',
-    Advanced: 'text-blue-400',
-    Intermediate: 'text-yellow-400',
-};
+// const levelColors = {
+//     Expert: 'text-accent',
+//     Advanced: 'text-blue-400',
+//     Intermediate: 'text-yellow-400',
+// };
 
 function StackCard({ stack, delay }) {
     const ref = useReveal();
@@ -79,8 +71,6 @@ function StackCard({ stack, delay }) {
         <div ref={ref} className={`reveal reveal-delay-${delay} stack-card card p-5 cursor-default transition-all duration-300`}>
             <div className='flex items-start justify-between mb-3'>
                 <img src={stack.icon} alt={stack.name} className='w-8 h-8 object-contain' />
-
-                <span className={`font-mono text-xs ${levelColors[stack.level]} opacity-80`}>{stack.level}</span>
             </div>
 
             <h3 className='font-display text-white font-semibold text-lg mb-1'>{stack.name}</h3>
@@ -91,6 +81,18 @@ function StackCard({ stack, delay }) {
 
 export default function Stacks() {
     const headRef = useReveal();
+    const { t } = useTranslation();
+
+    const stacks = [
+        { name: 'Python', icon: '/python.png', color: '#3776AB', desc: t('stacks.items.python') },
+        { name: 'JavaScript', icon: '/javascript.png', color: '#F7DF1E', desc: t('stacks.items.javascript') },
+        { name: 'Django', icon: '/django.png', color: '#092E20', desc: t('stacks.items.django') },
+        { name: 'Django REST', icon: '/django.png', color: '#A30000', desc: t('stacks.items.djangoRest') },
+        { name: 'Flask', icon: '/flask.png', color: '#000000', desc: t('stacks.items.flask') },
+        { name: 'Pandas', icon: '/pandas.png', color: '#150458', desc: t('stacks.items.pandas') },
+        { name: 'Selenium', icon: '/selenium.png', color: '#43B02A', desc: t('stacks.items.selenium') },
+        { name: 'ExpressJS', icon: '/expressjs.png', color: '#404040', desc: t('stacks.items.express') },
+    ];
 
     return (
         <section id='stacks' className='py-28 relative overflow-hidden'>
@@ -99,13 +101,13 @@ export default function Stacks() {
             <div className='max-w-6xl mx-auto px-6'>
                 {/* Heading */}
                 <div ref={headRef} className='reveal mb-16'>
-                    <p className='section-label'>Tech Stack</p>
+                    <p className='section-label'>{t('stacks.label')}</p>
                     <h2 className='section-heading'>
-                        What I work
+                        {t('stacks.heading1')}
                         <br />
-                        <span className='text-accent'>with</span>
+                        <span className='text-accent'>{t('stacks.heading2')}</span>
                     </h2>
-                    <p className='text-gray-500 mt-4 max-w-md'>Tools and technologies I use to build, automate, and ship products.</p>
+                    <p className='text-gray-500 mt-4 max-w-md'>{t('stacks.subtitle')}</p>
                 </div>
 
                 {/* Grid */}

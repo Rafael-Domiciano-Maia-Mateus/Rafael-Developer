@@ -1,8 +1,10 @@
 import { useEffect, useRef } from 'react';
 import { ArrowDown, Github, Linkedin } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function Hero() {
     const ref = useRef(null);
+    const { t } = useTranslation();
 
     useEffect(() => {
         const el = ref.current;
@@ -50,17 +52,17 @@ export default function Hero() {
                             <span className='text-gray-600'>.</span>
                         </h1>
 
-                        <p className='text-gray-400 text-lg leading-relaxed mb-4 max-w-md'>
-                            Software Developer focused on <span className='text-white font-medium'>automation</span> and{' '}
-                            <span className='text-white font-medium'>web development</span>. I create websites, APIs, and process automations.
-                            Additionally, I do data analysis with pandas, making life easier for my clients.
-                        </p>
+                        {/* <p className='text-gray-400 text-lg leading-relaxed mb-4 max-w-md'>{t('hero.description')}</p> */}
+                        <p
+                            className='text-gray-400 text-lg leading-relaxed mb-4 max-w-md'
+                            dangerouslySetInnerHTML={{ __html: t('hero.description') }}
+                        />
 
                         <p className='text-gray-600 text-sm font-mono mb-10'>Python · JavaScript</p>
 
                         <div className='flex flex-wrap gap-3'>
                             <button onClick={scrollToProjects} className='btn-primary'>
-                                View Projects
+                                {t('hero.viewProjects')}
                             </button>
                             <a
                                 href='#contact'
@@ -70,13 +72,13 @@ export default function Hero() {
                                 }}
                                 className='btn-ghost'
                             >
-                                Get in Touch
+                                {t('hero.getInTouch')}
                             </a>
                         </div>
 
                         {/* Social row */}
                         <div className='flex items-center gap-4 mt-10'>
-                            <span className='text-gray-600 text-xs font-mono'>Find me on</span>
+                            <span className='text-gray-600 text-xs font-mono'>{t('hero.findMe')}</span>
                             <div className='h-px w-8 bg-border' />
                             <a
                                 href='https://github.com/Rafael-Domiciano-Maia-Mateus'
@@ -116,13 +118,13 @@ export default function Hero() {
 
                             {/* Floating badge */}
                             <div className='absolute -bottom-4 -left-4 bg-surface-2 border border-border rounded-2xl px-4 py-3 shadow-xl'>
-                                <p className='font-mono text-accent text-xs'>2+ yrs</p>
-                                <p className='font-display text-white text-sm font-semibold'>Practical Experience</p>
+                                <p className='font-mono text-accent text-xs'>{t('hero.experienceTime')}</p>
+                                <p className='font-display text-white text-sm font-semibold'>{t('hero.experience')}</p>
                             </div>
 
                             <div className='absolute -top-4 -right-4 bg-surface-2 border border-border rounded-2xl px-4 py-3 shadow-xl'>
                                 <p className='font-mono text-accent text-xs'>5+</p>
-                                <p className='font-display text-white text-sm font-semibold'>Projects</p>
+                                <p className='font-display text-white text-sm font-semibold'>{t('hero.projects')}</p>
                             </div>
                         </div>
                     </div>

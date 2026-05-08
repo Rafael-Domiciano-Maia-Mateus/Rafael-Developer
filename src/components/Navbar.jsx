@@ -1,17 +1,23 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Code2 } from 'lucide-react';
-
-const links = [
-    { label: 'Home', href: '#home' },
-    { label: 'Stacks', href: '#stacks' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Contact', href: '#contact' },
-];
+import { Menu, X, Code2, Globe } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const [open, setOpen] = useState(false);
     const [active, setActive] = useState('home');
+    const { t, i18n } = useTranslation();
+
+    const links = [
+        { label: t('nav.home'), href: '#home' },
+        { label: t('nav.stacks'), href: '#stacks' },
+        { label: t('nav.projects'), href: '#projects' },
+        { label: t('nav.contact'), href: '#contact' },
+    ];
+
+    const toggleLang = () => {
+        i18n.changeLanguage(i18n.language === 'en' ? 'pt' : 'en');
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -84,17 +90,26 @@ export default function Navbar() {
                     })}
                 </ul>
 
-                {/* CTA */}
-                <a
-                    href='#contact'
-                    onClick={(e) => {
-                        e.preventDefault();
-                        handleNav('#contact');
-                    }}
-                    className='hidden md:block btn-primary text-sm'
-                >
-                    Hire me
-                </a>
+                <div className='hidden md:flex items-center gap-3'>
+                    <button
+                        onClick={toggleLang}
+                        className='flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border text-gray-400 hover:text-white hover:border-accent/40 transition-all text-sm font-mono'
+                    >
+                        <Globe size={14} />
+                        {i18n.language === 'en' ? 'EN' : 'PT'}
+                    </button>
+
+                    {/* <a
+                        href='#contact'
+                        onClick={(e) => {
+                            e.preventDefault();
+                            handleNav('#contact');
+                        }}
+                        className='btn-primary text-sm'
+                    >
+                        {t('nav.hireMe')}
+                    </a> */}
+                </div>
 
                 {/* Mobile toggle */}
                 <button
@@ -128,16 +143,13 @@ export default function Navbar() {
                         </li>
                     ))}
                     <li className='pt-2'>
-                        <a
-                            href='#contact'
-                            onClick={(e) => {
-                                e.preventDefault();
-                                handleNav('#contact');
-                            }}
-                            className='btn-primary block text-center text-sm'
+                        <button
+                            onClick={toggleLang}
+                            className='flex w-full items-center justify-center gap-1.5 px-4 py-3 rounded-xl border border-border text-gray-400 hover:text-white hover:border-accent/40 transition-all text-sm font-mono'
                         >
-                            Hire me
-                        </a>
+                            <Globe size={14} />
+                            {i18n.language === 'en' ? 'EN' : 'PT'}
+                        </button>
                     </li>
                 </ul>
             </div>

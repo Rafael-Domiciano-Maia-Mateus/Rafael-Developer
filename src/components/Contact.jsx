@@ -1,5 +1,6 @@
 import { Github, Linkedin, Youtube, Instagram, Mail, MessageCircle } from 'lucide-react';
 import { useReveal } from '../hooks/useReveal';
+import { useTranslation } from 'react-i18next';
 
 const socials = [
     {
@@ -59,6 +60,7 @@ const socials = [
 ];
 
 function SocialCard({ social, delay }) {
+    const { t } = useTranslation();
     const ref = useReveal();
     const Icon = social.icon;
 
@@ -94,6 +96,7 @@ function SocialCard({ social, delay }) {
 
 export default function Contact() {
     const headRef = useReveal();
+    const { t } = useTranslation();
 
     return (
         <section id='contact' className='py-28 relative overflow-hidden'>
@@ -102,13 +105,9 @@ export default function Contact() {
             <div className='max-w-6xl mx-auto px-6'>
                 {/* Heading */}
                 <div ref={headRef} className='reveal text-center mb-16'>
-                    <p className='section-label'>Let's connect</p>
-                    <h2 className='section-heading'>
-                        Get in <span className='text-accent'>Touch</span>
-                    </h2>
-                    <p className='text-gray-500 mt-4 max-w-md mx-auto'>
-                        Whether you have a project idea, a question, or just want to say hi — I'm always open to new conversations.
-                    </p>
+                    <p className='section-label' dangerouslySetInnerHTML={{ __html: t('contact.connect') }} />
+                    <h2 className='section-heading' dangerouslySetInnerHTML={{ __html: t('contact.label') }} />
+                    <p className='text-gray-500 mt-4 max-w-md mx-auto'>{t('contact.heading')}</p>
                 </div>
 
                 {/* Social grid */}
@@ -121,11 +120,11 @@ export default function Contact() {
                 {/* CTA banner */}
                 <div className='mt-16 card p-8 flex flex-col sm:flex-row items-center justify-between gap-6 max-w-4xl mx-auto bg-gradient-to-br from-surface-2 to-surface-3'>
                     <div>
-                        <h3 className='font-display text-white text-2xl font-bold mb-1'>Open to opportunities</h3>
-                        <p className='text-gray-500 text-sm'>Freelance, contracts, and full-time roles.</p>
+                        <h3 className='font-display text-white text-2xl font-bold mb-1'>{t('contact.opportunities')}</h3>
+                        <p className='text-gray-500 text-sm'>{t('contact.descriptionEmail')}</p>
                     </div>
                     <a href='mailto:rafelmaia.devbr@gmail.com' className='btn-primary whitespace-nowrap'>
-                        Send Email
+                        {t('contact.email')}
                     </a>
                 </div>
             </div>

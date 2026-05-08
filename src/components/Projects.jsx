@@ -1,59 +1,13 @@
 import { useState, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Github, ExternalLink } from 'lucide-react';
 import { useReveal } from '../hooks/useReveal';
-
-const projects = [
-    {
-        title: 'FinManager',
-        description:
-            'FinManager is a financial management system developed with Django and React. The platform automates expense control through the import of bank CSVs, offers interactive dashboards with Chart.js, and uses AI for financial forecasts. Built on a solid Service Layer architecture and automated tests, the system organizes finances by categories and generates PDF reports in a secure and responsive manner.',
-        tech: ['Python', 'JavaScript', 'Django', 'React', 'SQLite', 'Chart.js', 'WeasyPrint', 'Pandas'],
-        github: 'https://github.com/Rafael-Domiciano-Maia-Mateus/FinManager',
-        color: '#00ff87',
-        emoji: '/FinManager.png',
-    },
-    {
-        title: 'Flappy Bird',
-        description:
-            'A faithful recreation of the classic game Flappy Bird built with Python and Pygame. It features perfect pixel collision detection, increasing difficulty, high score tracking with local persistence, and smooth gameplay. A fun exercise in designing game loops and 2D physics.',
-        tech: ['Python', 'Pygame'],
-        github: 'https://github.com/Rafael-Domiciano-Maia-Mateus/Flappy-Bird',
-        color: '#60a5fa',
-        emoji: '/FlappyBird.png',
-    },
-    {
-        title: 'Chalés São Mateus',
-        description:
-            'Project developed for Chalés São Mateus, focusing on visual presentation, information organization, and user experience. The site uses HTML, CSS, and JavaScript to create a modern, responsive, and intuitive interface, serving as a basis for promoting the enterprise and future project expansions.',
-        tech: ['HTML', 'CSS', 'JavaScript'],
-        github: 'https://github.com/Rafael-Domiciano-Maia-Mateus/Chales-Sao-Mateus-Web',
-        color: '#a78bfa',
-        emoji: '/ChalesSaoMateus.png',
-    },
-    // {
-    //     title: 'Currency Converter',
-    //     description:
-    //         'A real-time currency converter app that fetches live exchange rates from a public API. Built with Flask for the backend and vanilla JavaScript for the frontend. Supports 150+ currencies, historical rate comparison, and offline fallback with cached rates.',
-    //     tech: ['Flask', 'JavaScript', 'REST API'],
-    //     github: 'https://github.com/',
-    //     color: '#fb923c',
-    //     emoji: '💱',
-    // },
-    // {
-    //     title: 'Weather Forecast',
-    //     description:
-    //         'A weather forecast website using the OpenWeatherMap API. Displays current conditions, 7-day forecasts, humidity, wind speed, and UV index. Features geolocation for automatic city detection, city search, and a clean card-based UI with animated weather icons.',
-    //     tech: ['JavaScript', 'API', 'CSS'],
-    //     github: 'https://github.com/',
-    //     color: '#34d399',
-    //     emoji: '🌤️',
-    // },
-];
+import { useTranslation } from 'react-i18next';
 
 const TRUNCATE_LENGTH = 120;
 
 function ProjectCard({ project }) {
     const [expanded, setExpanded] = useState(false);
+    const { t } = useTranslation();
     const isLong = project.description.length > TRUNCATE_LENGTH;
     const displayText = !expanded && isLong ? project.description.slice(0, TRUNCATE_LENGTH) + '…' : project.description;
 
@@ -85,7 +39,7 @@ function ProjectCard({ project }) {
                             onClick={() => setExpanded(!expanded)}
                             className='ml-1 text-accent hover:text-accent-dim font-medium text-sm transition-colors'
                         >
-                            {expanded ? 'Show less' : 'Read more'}
+                            {expanded ? t('projects.showLess') : t('projects.readMore')}
                         </button>
                     )}
                 </p>
@@ -112,7 +66,7 @@ function ProjectCard({ project }) {
                     <Github size={15} />
                     GitHub
                 </a>
-                <a
+                {/* <a
                     href={project.github}
                     target='_blank'
                     rel='noopener noreferrer'
@@ -122,7 +76,7 @@ function ProjectCard({ project }) {
                 >
                     <ExternalLink size={15} />
                     Live
-                </a>
+                </a> */}
             </div>
         </div>
     );
@@ -132,6 +86,35 @@ export default function Projects() {
     const headRef = useReveal();
     const trackRef = useRef(null);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const { t } = useTranslation();
+
+    const projects = [
+        {
+            title: 'FinManager',
+            description: t('projects.items.finmanager'),
+            tech: ['Python', 'JavaScript', 'Django', 'React', 'SQLite', 'Chart.js', 'WeasyPrint', 'Pandas'],
+            github: 'https://github.com/Rafael-Domiciano-Maia-Mateus/FinManager',
+            color: '#00ff87',
+            emoji: '/FinManager.png',
+        },
+        {
+            title: 'Flappy Bird',
+            description: t('projects.items.flappybird'),
+            tech: ['Python', 'Pygame'],
+            github: 'https://github.com/Rafael-Domiciano-Maia-Mateus/Flappy-Bird',
+            color: '#60a5fa',
+            emoji: '/FlappyBird.png',
+        },
+        {
+            title: 'Chalés São Mateus',
+            description: t('projects.items.chales'),
+            tech: ['HTML', 'CSS', 'JavaScript'],
+            github: 'https://github.com/Rafael-Domiciano-Maia-Mateus/Chales-Sao-Mateus-Web',
+            color: '#a78bfa',
+            emoji: '/ChalesSaoMateus.png',
+        },
+    ];
+
     const cardWidth = typeof window !== 'undefined' && window.innerWidth < 640 ? window.innerWidth - 48 : 436;
 
     const slideTo = (index) => {
@@ -157,11 +140,11 @@ export default function Projects() {
                 {/* Heading */}
                 <div ref={headRef} className='reveal flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12'>
                     <div>
-                        <p className='section-label'>Portfolio</p>
+                        <p className='section-label'>{t('projects.label')}</p>
                         <h2 className='section-heading'>
-                            Selected
+                            {t('projects.heading1')}
                             <br />
-                            <span className='text-accent'>Projects</span>
+                            <span className='text-accent'>{t('projects.heading2')}</span>
                         </h2>
                     </div>
 
@@ -217,7 +200,7 @@ export default function Projects() {
                 </div>
 
                 <p className='text-gray-600 text-xs font-mono mt-4 text-center sm:text-left'>
-                    {currentIndex + 1} / {projects.length} — swipe or use arrows
+                    {currentIndex + 1} / {projects.length} — {t('projects.swipe')}
                 </p>
             </div>
         </section>
