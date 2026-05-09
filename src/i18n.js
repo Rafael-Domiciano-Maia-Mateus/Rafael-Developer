@@ -39,6 +39,7 @@ i18n.use(initReactI18next).init({
                         pandas: 'Data manipulation, analysis, and transformation at scale.',
                         selenium: 'Browser automation and end-to-end web testing.',
                         express: 'Minimal Node.js framework for fast backend APIs.',
+                        react: 'JavaScript library for building reactive user interfaces and reusable components.',
                     },
                 },
 
@@ -110,6 +111,7 @@ i18n.use(initReactI18next).init({
                         pandas: 'Manipulação, análise e transformação de dados em escala.',
                         selenium: 'Automação de navegador e testes end-to-end.',
                         express: 'Framework Node.js minimalista para APIs backend rápidas.',
+                        react: 'Biblioteca JavaScript para construção de interfaces de usuário reativas e componentes reutilizáveis.',
                     },
                 },
 

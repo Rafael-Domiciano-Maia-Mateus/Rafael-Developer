@@ -1,69 +1,6 @@
 import { useReveal } from '../hooks/useReveal';
 import { useTranslation } from 'react-i18next';
 
-// const stacks = [
-//     {
-//         name: 'Python',
-//         icon: '/python.png',
-//         color: '#3776AB',
-//         desc: 'Primary language for scripting, automation, and backend development.',
-//     },
-//     {
-//         name: 'JavaScript',
-//         icon: '/javascript.png',
-//         color: '#F7DF1E',
-//         desc: 'Frontend interactivity, APIs, and Node.js ecosystem.',
-//     },
-//     {
-//         name: 'Django',
-//         icon: '/django.png',
-//         color: '#092E20',
-//         desc: 'Full-stack web framework for rapid, robust web applications.',
-//     },
-//     {
-//         name: 'Django REST',
-//         icon: '/django.png',
-//         color: '#A30000',
-//         desc: 'Building powerful RESTful APIs with authentication and serialization.',
-//     },
-//     {
-//         name: 'Flask',
-//         icon: '/flask.png',
-//         color: '#000000',
-//         desc: 'Lightweight WSGI microframework for Python web apps.',
-//     },
-//     {
-//         name: 'Pandas',
-//         icon: '/pandas.png',
-//         color: '#150458',
-//         desc: 'Data manipulation, analysis, and transformation at scale.',
-//     },
-//     // {
-//     //     name: 'PyAutoGUI',
-//     //     icon: '🤖',
-//     //     color: '#4B8BBE',
-//     //     desc: 'GUI automation, screen control, and RPA workflows.',
-//     // },
-//     {
-//         name: 'Selenium',
-//         icon: '/selenium.png',
-//         color: '#43B02A',
-//         desc: 'Browser automation and end-to-end web testing.',
-//     },
-//     {
-//         name: 'ExpressJS',
-//         icon: '/expressjs.png',
-//         color: '#404040',
-//         desc: 'Minimal Node.js framework for fast backend APIs.',
-//     },
-// ];
-
-// const levelColors = {
-//     Expert: 'text-accent',
-//     Advanced: 'text-blue-400',
-//     Intermediate: 'text-yellow-400',
-// };
-
 function StackCard({ stack, delay }) {
     const ref = useReveal();
 
@@ -92,6 +29,7 @@ export default function Stacks() {
         { name: 'Pandas', icon: '/pandas.png', color: '#150458', desc: t('stacks.items.pandas') },
         { name: 'Selenium', icon: '/selenium.png', color: '#43B02A', desc: t('stacks.items.selenium') },
         { name: 'ExpressJS', icon: '/expressjs.png', color: '#404040', desc: t('stacks.items.express') },
+        { name: 'React', icon: '/react.png', color: '#61DAFB', desc: t('stacks.items.react') },
     ];
 
     return (
