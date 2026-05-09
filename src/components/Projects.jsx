@@ -92,10 +92,18 @@ export default function Projects() {
         {
             title: 'FinManager',
             description: t('projects.items.finmanager'),
-            tech: ['Python', 'JavaScript', 'Django', 'React', 'SQLite', 'Chart.js', 'WeasyPrint', 'Pandas'],
+            tech: ['Python', 'JavaScript', 'Django', 'React', 'SQLite', 'Chart.js', 'WeasyPrint', 'Pandas', 'HTML', 'CSS', 'TailwindCSS'],
             github: 'https://github.com/Rafael-Domiciano-Maia-Mateus/FinManager',
             color: '#00ff87',
             emoji: '/FinManager.png',
+        },
+        {
+            title: 'Sistema Web Advocacia',
+            description: t('projects.items.advocacia'),
+            tech: ['HTML', 'CSS', 'JavaScript', 'React', 'TailwindCSS'],
+            github: 'https://github.com/Rafael-Domiciano-Maia-Mateus/advocacia-web',
+            color: '#a78bfa',
+            emoji: '/advocacia.png',
         },
         {
             title: 'Flappy Bird',
