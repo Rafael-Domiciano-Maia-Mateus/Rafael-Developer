@@ -98,7 +98,7 @@ export default function Projects() {
             emoji: '/FinManager.png',
         },
         {
-            title: 'Sistema Web Advocacia',
+            title: t('projects.title.Advocacy'),
             description: t('projects.items.advocacia'),
             tech: ['HTML', 'CSS', 'JavaScript', 'React', 'TailwindCSS'],
             github: 'https://github.com/Rafael-Domiciano-Maia-Mateus/advocacia-web',

@@ -50,6 +50,9 @@ i18n.use(initReactI18next).init({
                     readMore: 'Read more',
                     showLess: 'Show less',
                     swipe: 'swipe or use arrows',
+                    title: {
+                        Advocacy: 'Law Practice Web System',
+                    },
                     items: {
                         finmanager:
                             'FinManager is a financial management system developed with Django and React. The platform automates expense control through the import of bank CSVs, offers interactive dashboards with Chart.js, and uses AI for financial forecasts. Built on a solid Service Layer architecture and automated tests, the system organizes finances by categories and generates PDF reports in a secure and responsive manner.',
@@ -122,6 +125,9 @@ i18n.use(initReactI18next).init({
                     readMore: 'Ler mais',
                     showLess: 'Mostrar menos',
                     swipe: 'deslize ou use as setas',
+                    title: {
+                        Advocacy: 'Sistema Web Advocacia',
+                    },
                     items: {
                         finmanager:
                             'FinManager é um sistema de gestão financeira desenvolvido com Django e React. A plataforma automatiza o controle de despesas por meio da importação de CSVs bancários, oferece dashboards interativos com Chart.js e usa IA para previsões financeiras. Construído sobre uma arquitetura sólida de Service Layer e testes automatizados, o sistema organiza as finanças por categorias e gera relatórios em PDF de forma segura e responsiva.',
