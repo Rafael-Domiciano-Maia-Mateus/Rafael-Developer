@@ -1,4 +1,5 @@
 import i18n from 'i18next';
+import { TableRowsSplit } from 'lucide-react';
 import { initReactI18next } from 'react-i18next';
 
 i18n.use(initReactI18next).init({
@@ -7,6 +8,7 @@ i18n.use(initReactI18next).init({
             translation: {
                 nav: {
                     home: 'Home',
+                    about: 'About',
                     stacks: 'Stacks',
                     projects: 'Projects',
                     contact: 'Contact',
@@ -25,6 +27,46 @@ i18n.use(initReactI18next).init({
                     profileAlt: 'My photo',
                 },
 
+                about: {
+                    label: 'About me',
+                    heading: 'Who I am',
+                    subheading: 'A bit about my journey and what drives me.',
+                    bio: {
+                        p1: "<strong class='text-white font-semibold'>Hello!</strong> I'm Rafael, a backend developer focused on creating APIs, systems architecture, and scalable web applications.",
+                        p2: "I'm currently <span class='text-white font-medium'>pursuing a Software Engineering degree</span>, always aiming to align academic theory with hands-on project development, focusing on performance and clean code.",
+                        p3: "I have experience primarily with <span class='text-white border-b border-accent/20 pb-0.5'>Python (Django & DRF)</span>, alongside working with JavaScript and C# to deliver complete and robust solutions.",
+                    },
+                    cards: {
+                        education: 'B.S. in Software Eng.',
+                        location: 'Brazil',
+                        focus: 'Backend & APIs',
+                        labels: {
+                            education: 'Education',
+                            location: 'Location',
+                            focus: 'Focus',
+                        },
+                    },
+                    journey: {
+                        title: 'My Journey',
+                        y2026: {
+                            title: 'Software Engineering & Backend',
+                            desc: 'Started my Software Engineering degree (ongoing). Concurrently, I continue working on freelance projects, API architecture, and expanding my backend ecosystem with C# and .NET.',
+                        },
+                        y2025: {
+                            title: 'Complex Projects & Algorithms',
+                            desc: "Evolved to more advanced projects and solved LeetCode challenges to sharpen logic. Learned JavaScript to integrate into my projects' ecosystem.",
+                        },
+                        y2024: {
+                            title: 'Practical Studies',
+                            desc: 'The year my studies gained total consistency. I began building and delivering my first practical and functional projects.',
+                        },
+                        y2023: {
+                            title: 'First Contact',
+                            desc: 'Introduction to programming. This was when I discovered the software development field and started researching deeply into it.',
+                        },
+                    },
+                },
+
                 stacks: {
                     label: 'Tech Stack',
                     heading1: 'What I work',
@@ -33,6 +75,7 @@ i18n.use(initReactI18next).init({
                     items: {
                         python: 'Primary language for scripting, automation, and backend development.',
                         javascript: 'Frontend interactivity, APIs, and Node.js ecosystem.',
+                        csharp: 'Versatile language for backend development, automation, and desktop applications.',
                         django: 'Full-stack web framework for rapid, robust web applications.',
                         djangoRest: 'Building powerful RESTful APIs with authentication and serialization.',
                         flask: 'Lightweight WSGI microframework for Python web apps.',
@@ -40,6 +83,8 @@ i18n.use(initReactI18next).init({
                         selenium: 'Browser automation and end-to-end web testing.',
                         express: 'Minimal Node.js framework for fast backend APIs.',
                         react: 'JavaScript library for building reactive user interfaces and reusable components.',
+                        tailwind: 'Utility-first CSS framework for responsive, modern designs.',
+                        dotnet: 'Comprehensive framework for building modern applications across platforms with C#.',
                     },
                 },
 
@@ -82,6 +127,7 @@ i18n.use(initReactI18next).init({
             translation: {
                 nav: {
                     home: 'Início',
+                    about: 'Sobre',
                     stacks: 'Tecnologias',
                     projects: 'Projetos',
                     contact: 'Contato',
@@ -100,6 +146,46 @@ i18n.use(initReactI18next).init({
                     profileAlt: 'Minha foto',
                 },
 
+                about: {
+                    label: 'Sobre mim',
+                    heading: 'Quem sou eu',
+                    subheading: 'Um pouco sobre minha trajetória e o que me move.',
+                    bio: {
+                        p1: "<strong class='text-white font-semibold'>Olá!</strong> Sou Rafael, desenvolvedor backend focado na criação de APIs, arquitetura de sistemas e aplicações web escaláveis.",
+                        p2: "Atualmente estou <span class='text-white font-medium'>cursando Engenharia de Software</span>, buscando sempre alinhar a base teórica acadêmica com o desenvolvimento de projetos práticos, foco em performance e organização de código.",
+                        p3: "Tenho experiência principalmente com <span class='text-white border-b border-accent/20 pb-0.5'>Python (Django & DRF)</span>, além de trabalhar com JavaScript e C# para entregar soluções completas e robustas.",
+                    },
+                    cards: {
+                        education: 'Cursando Eng. de Software',
+                        location: 'Brasil',
+                        focus: 'Backend & APIs',
+                        labels: {
+                            education: 'Formação',
+                            location: 'Localização',
+                            focus: 'Foco',
+                        },
+                    },
+                    journey: {
+                        title: 'Minha Jornada',
+                        y2026: {
+                            title: 'Engenharia de Software & Backend',
+                            desc: 'Iniciei a graduação em Engenharia de Software (em andamento). Paralelamente, sigo atuando com projetos freelancer, arquitetura de APIs e expandindo meu ecossistema backend com C# e .NET.',
+                        },
+                        y2025: {
+                            title: 'Projetos Complexos & Algoritmos',
+                            desc: 'Evolução para projetos mais avançados e resolução de desafios no LeetCode para afiar a lógica. Aprendi JavaScript para integrar ao ecossistema dos meus projetos.',
+                        },
+                        y2024: {
+                            title: 'Estudos Práticos',
+                            desc: 'O ano em que os estudos ganharam consistência total. Comecei a construir e entregar os primeiros projetos práticos e funcionais.',
+                        },
+                        y2023: {
+                            title: 'O Primeiro Contato',
+                            desc: 'Início na programação. Foi quando conheci a área de desenvolvimento de software e comecei a pesquisar a fundo sobre o assunto.',
+                        },
+                    },
+                },
+
                 stacks: {
                     label: 'Tecnologias',
                     heading1: 'Com o que eu',
@@ -108,6 +194,7 @@ i18n.use(initReactI18next).init({
                     items: {
                         python: 'Linguagem principal para scripts, automação e desenvolvimento backend.',
                         javascript: 'Interatividade no frontend, APIs e ecossistema Node.js.',
+                        csharp: 'Linguagem versátil para desenvolvimento backend, automação e aplicações desktop.',
                         django: 'Framework web completo para aplicações robustas e rápidas.',
                         djangoRest: 'Construção de APIs RESTful com autenticação e serialização.',
                         flask: 'Microframework WSGI leve para aplicações web em Python.',
@@ -115,6 +202,8 @@ i18n.use(initReactI18next).init({
                         selenium: 'Automação de navegador e testes end-to-end.',
                         express: 'Framework Node.js minimalista para APIs backend rápidas.',
                         react: 'Biblioteca JavaScript para construção de interfaces de usuário reativas e componentes reutilizáveis.',
+                        tailwind: 'Framework CSS utilitário para design responsivo e moderno.',
+                        dotnet: 'Framework abrangente para construir aplicações modernas em diversas plataformas com C#.',
                     },
                 },
 

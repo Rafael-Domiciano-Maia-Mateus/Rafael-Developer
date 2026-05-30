@@ -23,6 +23,7 @@ export default function Stacks() {
     const stacks = [
         { name: 'Python', icon: '/python.png', color: '#3776AB', desc: t('stacks.items.python') },
         { name: 'JavaScript', icon: '/javascript.png', color: '#F7DF1E', desc: t('stacks.items.javascript') },
+        { name: 'C Sharp', icon: '/csharp.png', color: '#239120', desc: t('stacks.items.csharp') },
         { name: 'Django', icon: '/django.png', color: '#092E20', desc: t('stacks.items.django') },
         { name: 'Django REST', icon: '/django.png', color: '#A30000', desc: t('stacks.items.djangoRest') },
         { name: 'Flask', icon: '/flask.png', color: '#000000', desc: t('stacks.items.flask') },
@@ -30,6 +31,8 @@ export default function Stacks() {
         { name: 'Selenium', icon: '/selenium.png', color: '#43B02A', desc: t('stacks.items.selenium') },
         { name: 'ExpressJS', icon: '/expressjs.png', color: '#404040', desc: t('stacks.items.express') },
         { name: 'React', icon: '/react.png', color: '#61DAFB', desc: t('stacks.items.react') },
+        { name: 'Tailwind CSS', icon: '/tailwind.png', color: '#06B6D4', desc: t('stacks.items.tailwind') },
+        { name: '.net', icon: '/dotnet.png', color: '#512BD4', desc: t('stacks.items.dotnet') },
     ];
 
     return (

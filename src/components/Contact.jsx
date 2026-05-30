@@ -33,7 +33,7 @@ const socials = [
     {
         name: 'Instagram',
         handle: '@dev_rafael_maia',
-        href: 'https://www.instagram.com/dev_rafael_maia/?utm_source=ig_web_button_share_sheet',
+        href: 'https://www.instagram.com/dev_rafael_maia/',
         icon: Instagram,
         color: '#E4405F',
         bg: '#E4405F10',

@@ -6,17 +6,18 @@ export function useReveal() {
     useEffect(() => {
         const el = ref.current;
         if (!el) return;
-
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
                     el.classList.add('visible');
-                    observer.disconnect();
+                } else {
+                    el.classList.remove('visible');
                 }
             },
-            { threshold: 0.1 },
+            {
+                threshold: 0.1,
+            },
         );
-
         observer.observe(el);
         return () => observer.disconnect();
     }, []);

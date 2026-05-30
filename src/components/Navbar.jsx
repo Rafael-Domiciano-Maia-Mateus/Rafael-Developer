@@ -10,6 +10,7 @@ export default function Navbar() {
 
     const links = [
         { label: t('nav.home'), href: '#home' },
+        { label: t('nav.about'), href: '#about' },
         { label: t('nav.stacks'), href: '#stacks' },
         { label: t('nav.projects'), href: '#projects' },
         { label: t('nav.contact'), href: '#contact' },
@@ -23,7 +24,7 @@ export default function Navbar() {
         const handleScroll = () => {
             setScrolled(window.scrollY > 20);
 
-            const sections = ['home', 'stacks', 'projects', 'contact'];
+            const sections = ['home', 'about', 'stacks', 'projects', 'contact'];
             for (const id of sections.reverse()) {
                 const el = document.getElementById(id);
                 if (el && window.scrollY >= el.offsetTop - 120) {
@@ -124,7 +125,7 @@ export default function Navbar() {
             {/* Mobile menu */}
             <div
                 className={`md:hidden border-t border-border bg-surface/95 backdrop-blur-md transition-all duration-300 overflow-hidden ${
-                    open ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
+                    open ? 'max-h-90 opacity-100' : 'max-h-0 opacity-0'
                 }`}
             >
                 <ul className='px-6 py-4 flex flex-col gap-1'>
@@ -145,9 +146,9 @@ export default function Navbar() {
                     <li className='pt-2'>
                         <button
                             onClick={toggleLang}
-                            className='flex w-full items-center justify-center gap-1.5 px-4 py-3 rounded-xl border border-border text-gray-400 hover:text-white hover:border-accent/40 transition-all text-sm font-mono'
+                            className='flex w-full items-center justify-center gap-1.5 px-5 py-3 rounded-xl border border-border text-gray-400 hover:text-white hover:border-accent/40 transition-all text-sm font-mono'
                         >
-                            <Globe size={14} />
+                            <Globe size={15} />
                             {i18n.language === 'en' ? 'EN' : 'PT'}
                         </button>
                     </li>
