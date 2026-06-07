@@ -32,9 +32,9 @@ i18n.use(initReactI18next).init({
                     heading: 'Who I am',
                     subheading: 'A bit about my journey and what drives me.',
                     bio: {
-                        p1: "<strong class='text-white font-semibold'>Hello!</strong> I'm Rafael, a backend developer focused on creating APIs, systems architecture, and scalable web applications.",
-                        p2: "I'm currently <span class='text-white font-medium'>pursuing a Software Engineering degree</span>, always aiming to align academic theory with hands-on project development, focusing on performance and clean code.",
-                        p3: "I have experience primarily with <span class='text-white border-b border-accent/20 pb-0.5'>Python (Django & DRF)</span>, alongside working with JavaScript and C# to deliver complete and robust solutions.",
+                        p1: "<strong class='text-white font-semibold'>Hello!</strong> I'm Rafael, a software developer focused on <span class='text-white border-b border-accent/20 pb-0.5'>backend</span>, working on APIs, system architecture, and scalable web applications. I am currently studying <span class='text-white font-medium'>Software Engineering</span>, constantly seeking to combine academic knowledge with professional practice, with special attention to <span class='text-white border-b border-accent/20 pb-0.5'>performance</span>, organization, and code quality.",
+                        p2: "My main experience is within the <span class='text-white border-b border-accent/20 pb-0.5'>Python</span> ecosystem, using <span class='text-white font-medium'>Django</span> and <span class='text-white font-medium'>Django REST Framework</span> to develop robust and well-structured solutions. I also have experience with <span class='text-white border-b border-accent/20 pb-0.5'>JavaScript</span> and <span class='text-white border-b border-accent/20 pb-0.5'>C#</span>, allowing me to contribute across different stages of development and build complete, efficient applications.",
+                        p3: "In addition to backend development, I also work as a <span class='text-white font-medium'>freelancer</span> creating <span class='text-white border-b border-accent/20 pb-0.5'>static websites</span> and <span class='text-white border-b border-accent/20 pb-0.5'>landing pages</span>, developing modern, responsive interfaces focused on digital presence and professional business presentation.",
                     },
                     cards: {
                         education: 'B.S. in Software Eng.',
@@ -151,9 +151,9 @@ i18n.use(initReactI18next).init({
                     heading: 'Quem sou eu',
                     subheading: 'Um pouco sobre minha trajetória e o que me move.',
                     bio: {
-                        p1: "<strong class='text-white font-semibold'>Olá!</strong> Sou Rafael, desenvolvedor backend focado na criação de APIs, arquitetura de sistemas e aplicações web escaláveis.",
-                        p2: "Atualmente estou <span class='text-white font-medium'>cursando Engenharia de Software</span>, buscando sempre alinhar a base teórica acadêmica com o desenvolvimento de projetos práticos, foco em performance e organização de código.",
-                        p3: "Tenho experiência principalmente com <span class='text-white border-b border-accent/20 pb-0.5'>Python (Django & DRF)</span>, além de trabalhar com JavaScript e C# para entregar soluções completas e robustas.",
+                        p1: 'Olá! Sou Rafael, desenvolvedor de software com foco em backend, atuando no desenvolvimento de APIs, arquitetura de sistemas e aplicações web escaláveis. Atualmente curso Engenharia de Software, buscando constantemente unir conhecimento acadêmico à prática profissional, com atenção especial à performance, organização e qualidade de código.',
+                        p2: "Minha principal experiência está no ecossistema <span class='text-white border-b border-accent/20 pb-0.5'>Python</span>, utilizando <span class='text-white font-medium'>Django</span> e <span class='text-white font-medium'>Django REST Framework</span> no desenvolvimento de soluções robustas e bem estruturadas. Também possuo conhecimento em <span class='text-white border-b border-accent/20 pb-0.5'>JavaScript</span> e <span class='text-white border-b border-accent/20 pb-0.5'>C#</span>, o que me permite participar de diferentes etapas do desenvolvimento e contribuir para aplicações completas e eficientes.",
+                        p3: "Além da atuação em backend, trabalho como <span class='text-white font-medium'>freelancer</span> no desenvolvimento de <span class='text-white border-b border-accent/20 pb-0.5'>sites estáticos</span> e <span class='text-white border-b border-accent/20 pb-0.5'>landing pages</span>, criando interfaces modernas, responsivas e voltadas para presença digital e apresentação profissional de serviços e negócios.",
                     },
                     cards: {
                         education: 'Cursando Eng. de Software',
