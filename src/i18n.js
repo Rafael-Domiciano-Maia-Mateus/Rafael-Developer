@@ -97,6 +97,7 @@ i18n.use(initReactI18next).init({
                     swipe: 'swipe or use arrows',
                     title: {
                         Advocacy: 'Law Practice Web System',
+                        Hotel: 'Hotel Portfolio',
                     },
                     items: {
                         finmanager:
@@ -106,6 +107,7 @@ i18n.use(initReactI18next).init({
                         flappybird:
                             'A faithful recreation of the classic game Flappy Bird built with Python and Pygame. It features perfect pixel collision detection, increasing difficulty, high score tracking with local persistence, and smooth gameplay. A fun exercise in designing game loops and 2D physics.',
                         chales: 'Project developed for Chalés São Mateus, focusing on visual presentation, information organization, and user experience. The site uses HTML, CSS, and JavaScript to create a modern, responsive, and intuitive interface, serving as a basis for promoting the enterprise and future project expansions.',
+                        hotel: 'Institutional website for a hotel, developed as a portfolio project to showcase Front-end development skills. The application was built with React, HTML, CSS, and Tailwind CSS, following best practices for responsiveness, component organization, and creating modern and intuitive interfaces.',
                     },
                 },
 
@@ -216,6 +218,7 @@ i18n.use(initReactI18next).init({
                     swipe: 'deslize ou use as setas',
                     title: {
                         Advocacy: 'Sistema Web Advocacia',
+                        Hotel: 'Hotel Portfólio',
                     },
                     items: {
                         finmanager:
@@ -225,6 +228,7 @@ i18n.use(initReactI18next).init({
                         flappybird:
                             'Uma recriação fiel do clássico Flappy Bird feita com Python e Pygame. Conta com detecção de colisão por pixel, dificuldade crescente, registro de pontuação máxima com persistência local e jogabilidade fluida. Um exercício divertido no design de game loops e física 2D.',
                         chales: 'Projeto desenvolvido para os Chalés São Mateus, com foco em apresentação visual, organização das informações e experiência do usuário. O site usa HTML, CSS e JavaScript para criar uma interface moderna, responsiva e intuitiva, servindo de base para a divulgação do empreendimento e futuras expansões.',
+                        hotel: 'Website institucional para um hotel, desenvolvido como projeto de portfólio para demonstrar conhecimentos em desenvolvimento Front-end. A aplicação foi construída com React, HTML, CSS e Tailwind CSS, seguindo boas práticas de responsividade, organização de componentes e criação de interfaces modernas e intuitivas.',
                     },
                 },
 

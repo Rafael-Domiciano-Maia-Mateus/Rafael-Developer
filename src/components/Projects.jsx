@@ -106,6 +106,14 @@ export default function Projects() {
             emoji: '/advocacia.png',
         },
         {
+            title: t('projects.title.Hotel'),
+            description: t('projects.items.hotel'),
+            tech: ['HTML', 'CSS', 'JavaScript'],
+            github: 'https://github.com/Rafael-Domiciano-Maia-Mateus/Model-Hotel-portfolio',
+            color: '#60a5fa',
+            emoji: '/hotel_portfolio.png',
+        },
+        {
             title: 'Flappy Bird',
             description: t('projects.items.flappybird'),
             tech: ['Python', 'Pygame'],
