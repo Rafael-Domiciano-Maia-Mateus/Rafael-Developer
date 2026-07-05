@@ -77,6 +77,23 @@ function ProjectCard({ project }) {
                     <ExternalLink size={15} />
                     Live
                 </a> */}
+                {project.live && (
+                    <a
+                        href={project.live}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='flex items-center gap-1.5 px-4 py-2.5 rounded-xl transition-all duration-200 text-sm font-display font-medium border hover:scale-105 active:scale-95 justify-center'
+                        style={{
+                            borderColor: `${project.color}40`,
+                            color: project.color,
+                            background: `${project.color}08`,
+                        }}
+                        aria-label={`Open ${project.title}`}
+                    >
+                        <ExternalLink size={15} />
+                        Live
+                    </a>
+                )}
             </div>
         </div>
     );
@@ -94,6 +111,7 @@ export default function Projects() {
             description: t('projects.items.finmanager'),
             tech: ['Python', 'JavaScript', 'Django', 'React', 'SQLite', 'Chart.js', 'WeasyPrint', 'Pandas', 'HTML', 'CSS', 'TailwindCSS'],
             github: 'https://github.com/Rafael-Domiciano-Maia-Mateus/FinManager',
+            live: '',
             color: '#00ff87',
             emoji: '/FinManager.png',
         },
@@ -102,6 +120,7 @@ export default function Projects() {
             description: t('projects.items.advocacia'),
             tech: ['HTML', 'CSS', 'JavaScript', 'React', 'TailwindCSS'],
             github: 'https://github.com/Rafael-Domiciano-Maia-Mateus/advocacia-web',
+            live: 'https://advocacia-web-iota.vercel.app/',
             color: '#a78bfa',
             emoji: '/advocacia.png',
         },
@@ -110,6 +129,7 @@ export default function Projects() {
             description: t('projects.items.hotel'),
             tech: ['HTML', 'CSS', 'JavaScript'],
             github: 'https://github.com/Rafael-Domiciano-Maia-Mateus/Model-Hotel-portfolio',
+            live: 'https://model-hotel-portfolio.vercel.app/',
             color: '#60a5fa',
             emoji: '/hotel_portfolio.png',
         },
@@ -118,6 +138,7 @@ export default function Projects() {
             description: t('projects.items.flappybird'),
             tech: ['Python', 'Pygame'],
             github: 'https://github.com/Rafael-Domiciano-Maia-Mateus/Flappy-Bird',
+            live: '',
             color: '#60a5fa',
             emoji: '/FlappyBird.png',
         },
@@ -126,6 +147,7 @@ export default function Projects() {
             description: t('projects.items.chales'),
             tech: ['HTML', 'CSS', 'JavaScript'],
             github: 'https://github.com/Rafael-Domiciano-Maia-Mateus/Chales-Sao-Mateus-Web',
+            live: '',
             color: '#a78bfa',
             emoji: '/ChalesSaoMateus.png',
         },
