@@ -127,7 +127,7 @@ export default function Projects() {
         {
             title: t('projects.title.Hotel'),
             description: t('projects.items.hotel'),
-            tech: ['HTML', 'CSS', 'JavaScript'],
+            tech: ['HTML', 'CSS', 'JavaScript', 'React', 'TailwindCSS'],
             github: 'https://github.com/Rafael-Domiciano-Maia-Mateus/Model-Hotel-portfolio',
             live: 'https://model-hotel-portfolio.vercel.app/',
             color: '#60a5fa',
