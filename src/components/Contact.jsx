@@ -15,7 +15,7 @@ const socials = [
     {
         name: 'YouTube',
         handle: '@dev_rafael_maia',
-        href: 'https://youtube.com/@dev_rafael_maia?si=jniTMItdqvfGj6Vl',
+        href: 'https://www.youtube.com/@dev_rafael_maia',
         icon: Youtube,
         color: '#FF0000',
         bg: '#FF000010',
